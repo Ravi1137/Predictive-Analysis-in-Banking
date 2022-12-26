@@ -1,0 +1,15 @@
+.container{
+    /* margin-top: 20px; */
+    /* border: 2px solid black; */
+    width: 70vw;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: whitesmoke;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.head{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}

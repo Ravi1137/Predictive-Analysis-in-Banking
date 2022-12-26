@@ -1,0 +1,9 @@
+.container{
+    margin-top: 20px; 
+    background-color: #FEFFFF; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

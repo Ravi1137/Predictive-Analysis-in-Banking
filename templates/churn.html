@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="nameth=device-nameth, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/fraud.css')}}" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+    integrity="sha284-ggOyR0iXCbMQv2Xipma24MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <title>Approval Form</title>
+</head>
+
+<body>
+  <div class="text-center">
+    <div class="head text-primary">Customer Churn Form</div>
+  </div>
+  <div class="container">
+    <form action="/churnpredict" method="post">
+      <!-- row1 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-4 p-2">
+          <label for="name">Name</label>
+          <input type="text" class="form-control form-control-sm" name="name" placeholder="Enter Nmae" required />
+        </div>
+
+        <!-- for Age -->
+        <div class="col-md-4 p-2">
+          <label for="age">Age</label>
+          <input type="number" class="form-control form-control-sm" name="age" placeholder="Enter Age" required />
+        </div>
+
+        <!-- for Gender -->
+        <div class="col p-2">
+          <label for="gender">Gender</label>
+          <select class="form-control form-control-sm" name="gender" required>
+            <option selected disabled="disabled">Choose...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- row2 -->
+      <div class="form-row">
+
+        <!-- for dependents -->
+        <div class="col p-2">
+          <label for="dependents">Dependents</label>
+          <select class="form-control form-control-sm" name="dependents" required>
+            <option selected disabled="disabled">Choose...</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+          </select>
+        </div>
+
+        <!-- for Occupation -->
+        <div class="col p-2">
+          <label for="occupation">Occupation</label>
+          <select class="form-control form-control-sm" name="occupation" required>
+            <option selected disabled="disabled">Choose...</option>
+            <option value="Self Employed">Self Employed</option>
+            <option value="Salaried">Salaried</option>
+            <option value="Student">Student</option>
+            <option value="Retired">Retired</option>
+            <option value="Company">Company</option>
+          </select>
+        </div>
+
+        <!-- for Networth -->
+        <div class="col p-2">
+          <label for="networth">Net Worth Category</label>
+          <select class="form-control form-control-sm" name="networth" required>
+            <option selected disabled="disabled">Choose...</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- row3 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-4 p-2">
+          <label for="vintage">Vintage</label>
+          <input type="number" class="form-control form-control-sm" name="vintage" placeholder=" Enter Time Since Customer Joined Bank in Days" required />
+        </div>
+
+        <!-- for day since last Transaction -->
+        <div class="col-md-4 p-2">
+          <label for="lasttransaction">Last Transaction</label>
+          <input type="number" class="form-control form-control-sm" name="lastdayoftransaction" placeholder="Enter Number of Days Before"
+            required />
+        </div>
+
+        <!-- for Current Balance -->
+        <div class="col-md-4 p-2">
+          <label for="currentbalance">Current Balance</label>
+          <input type="number" class="form-control form-control-sm" name="currentbalance" placeholder="In Rupees"
+            required />
+        </div>
+      </div>
+
+      <!-- row4 -->
+      <div class="form-row">
+        <!-- for previous_month_end_balance -->
+        <div class="col-md-4 p-2">
+          <label for="previous_month_end_balance">Previous Balance</label>
+          <input type="number" class="form-control form-control-sm" name="previous_month_end_balance"
+            placeholder="In Rupees" required />
+        </div>
+
+        <!-- for average_monthly_balance_quaterly -->
+        <div class="col-md-4 p-2">
+          <label for="average_monthly_balance_quarterly">Quaterly Balance</label>
+          <input type="number" class="form-control form-control-sm" name="average_monthly_balance_quaterly"
+            placeholder="In Rupees" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-4 p-2">
+          <label for="average_monthly_balance_prevQ2">Average Quarter Balance</label>
+          <input type="number" class="form-control form-control-sm" name="average_monthly_balance_quarterly_prev"
+            placeholder="In Rupees" required />
+        </div>
+      </div>
+
+      <!-- row5 -->
+      <div class="form-row">
+        <!-- for current_month_credit -->
+        <div class="col-md-4 p-2">
+          <label for="current_month_credit">Current Month Credit</label>
+          <input type="number" class="form-control form-control-sm" name="current_month_credit"
+            placeholder="In Rupees" required />
+        </div>
+
+        <!-- for previous_month_credit -->
+        <div class="col-md-4 p-2">
+          <label for="previous_month_credit">Previous Month Credit</label>
+          <input type="number" class="form-control form-control-sm" name="previous_month_credit"
+            placeholder="In Rupees" required />
+        </div>
+
+        <!-- for current_month_debit -->
+        <div class="col-md-4 p-2">
+          <label for="current_month_debit">Current Month Debit</label>
+          <input type="number" class="form-control form-control-sm" name="current_month_debit" placeholder="In Rupees"
+            required />
+        </div>
+      </div>
+
+      <!-- row6 -->
+      <div class="form-row">
+        <!-- for previous_month_debit -->
+        <div class="col-md-4 p-2">
+          <label for="previous_month_debit">Previous Month Debit</label>
+          <input type="number" class="form-control form-control-sm" name="previous_month_debit" placeholder="In Rupees"
+            required />
+        </div>
+
+        <!-- for current_month_balance -->
+        <div class="col-md-4 p-2">
+          <label for="current_month_balance">Current Average Balance</label>
+          <input type="number" class="form-control form-control-sm" name="current_month_balance"
+            placeholder="In Rupees" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-4 p-2">
+          <label for="previous_month_balance">Previous Average Balance</label>
+          <input type="number" class="form-control form-control-sm" name="previous_month_balance"
+            placeholder="In Rupees" required />
+        </div>
+      </div>
+
+
+      <br />
+
+      <div class="text-center">
+        <button type="submit" value="Predict" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-1.2.1.slim.min.js"
+    integrity="sha284-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha284-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa2JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+    integrity="sha284-JjSmVgyd0p2pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

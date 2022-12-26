@@ -1,0 +1,47 @@
+* {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containor {
+    margin-top: 40px;
+    width: 80%;
+    height: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+.hello {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.hello:hover {
+    color: red;
+    transform: scale(1.05);
+    animation: forwards;
+    transition: all 0.5s ease 0.1s;
+}
+
+.card h-100 {
+    border-radius: 5px;
+}
+
+.container{
+    margin-top: 20px;
+    /* border: 2px solid black; */
+}
+.headnav{
+    text-align: center;
+}
+.headnav h1{
+    font-size: 3rem;
+    font-weight: bold;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="nameth=device-nameth, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/fraud.css')}}" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+    integrity="sha284-ggOyR0iXCbMQv2Xipma24MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <title>Approval Form</title>
+</head>
+
+<body>
+  <div class="text-center">
+    <div class="head text-primary">Fraud Prevention Form</div>
+  </div>
+  <div class="container">
+    <form action="fraudpredict" method="post"> 
+      <!-- row1 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="name">Name</label>
+          <input type="text" class="form-control form-control-sm" name="name" placeholder="Enter Name" required />
+        </div>
+        <br>
+        <div class="col-md-3 p-2">
+          <label for="age">Age</label>
+          <input type="number" class="form-control form-control-sm" name="age" placeholder="Enter Age" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="Amount">Amount</label>
+          <input type="number" class="form-control form-control-sm" name="amount" placeholder="IN Lakh" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="gender">Gender</label>
+          <select class="form-control form-control-sm" name="gender" required>
+            <option selected>Choose...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- row2 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v1">V1</label>
+          <input type="number" class="form-control form-control-sm" name="v1" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="v2">V2</label>
+          <input type="number" class="form-control form-control-sm" name="v2" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V3</label>
+          <input type="number" class="form-control form-control-sm" name="v3" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V4</label>
+          <input type="number" class="form-control form-control-sm" name="v4" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row3 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V5</label>
+          <input type="number" class="form-control form-control-sm" name="v5" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V6</label>
+          <input type="number" class="form-control form-control-sm" name="v6" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V7</label>
+          <input type="number" class="form-control form-control-sm" name="v7" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V8</label>
+          <input type="number" class="form-control form-control-sm" name="v8" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row4 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V9</label>
+          <input type="number" class="form-control form-control-sm" name="v9" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V10</label>
+          <input type="number" class="form-control form-control-sm" name="v10" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V11</label>
+          <input type="number" class="form-control form-control-sm" name="v11" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V12</label>
+          <input type="number" class="form-control form-control-sm" name="v12" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row5 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V13</label>
+          <input type="number" class="form-control form-control-sm" name="v13" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V14</label>
+          <input type="number" class="form-control form-control-sm" name="v14" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V15</label>
+          <input type="number" class="form-control form-control-sm" name="v15" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V16</label>
+          <input type="number" class="form-control form-control-sm" name="v16" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row6 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V17</label>
+          <input type="number" class="form-control form-control-sm" name="v17" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V18</label>
+          <input type="number" class="form-control form-control-sm" name="v18" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V19</label>
+          <input type="number" class="form-control form-control-sm" name="v19" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V20</label>
+          <input type="number" class="form-control form-control-sm" name="v20" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row7 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V21</label>
+          <input type="number" class="form-control form-control-sm" name="v21" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V22</label>
+          <input type="number" class="form-control form-control-sm" name="v22" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V23</label>
+          <input type="number" class="form-control form-control-sm" name="v23" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V24</label>
+          <input type="number" class="form-control form-control-sm" name="v24" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <!-- row8 -->
+      <div class="form-row">
+        <!-- for fullname -->
+        <div class="col-md-3 p-2">
+          <label for="v">V25</label>
+          <input type="number" class="form-control form-control-sm" name="v25" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <div class="col-md-3 p-2">
+          <label for="V">V26</label>
+          <input type="number" class="form-control form-control-sm" name="v26" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+
+        <!-- for Time -->
+        <div class="col-md-3 p-2">
+          <label for="V">V27</label>
+          <input type="number" class="form-control form-control-sm" name="v27" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+        <!-- for marrige -->
+        <div class="col-md-3 p-2">
+          <label for="V">V28</label>
+          <input type="number" class="form-control form-control-sm" name="v28" placeholder="Enter Value Betwwen -10 to 10" required />
+        </div>
+      </div>
+
+      <br />
+
+      <div class="text-center">
+        <button type="submit" value="#" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-2.2.1.slim.min.js"
+    integrity="sha284-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha284-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa2JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+    integrity="sha284-JjSmVgyd0p2pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

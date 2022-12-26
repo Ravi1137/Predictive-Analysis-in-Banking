@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/churnpredict.css')}}"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Predicted Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- name -->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <div
+                  class="head text-primary"
+                  style="font-weight: bold; font-size: 3rem"
+                >
+                  {{prediction}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <!-- row1 -->
+      <div class="row">
+        <!-- name -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Name</h5>
+                <h6>{{name}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- age -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Age</h5>
+                <h6>{{age}} Years</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gender -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Gender</h5>
+                <h6>{{gender}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gender -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Dependents</h5>
+                <h6>{{dependents}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- row2 -->
+      <div class="row">
+        <!-- married -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Occupation</h5>
+                <h6>{{occupation}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- education -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Net Worth</h5>
+                <h6>{{networth}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- self Enployed -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Vintage</h5>
+                <h6>{{vintage}} Days</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gender -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Last Transaction</h5>
+                <h6>{{lastdayoftransaction}} Days Before</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- row3 -->
+      <div class="row">
+        <!-- applicant income -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Current Balance</h5>
+                <h6>Rs. {{currentbalance}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- previous_month_end_balance -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Previous Balance</h5>
+                <h6>Rs. {{previous_month_end_balance}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- average_monthly_balance_quaterly -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Quaterly Balance</h5>
+                <h6>Rs. {{average_monthly_balance_quaterly}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- average_monthly_balance_quarterly_prev -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Average Quarterly Balance</h5>
+                <h6>Rs. {{average_monthly_balance_quarterly_prev}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <!-- row4 -->
+      <div class="row">
+        <!-- current_month_credit -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Current Month Credit</h5>
+                <h6>Rs. {{current_month_credit}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- previous_month_credit -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Previous Month Credit</h5>
+                <h6>Rs. {{previous_month_credit}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- current_month_debit -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Current Month Debit</h5>
+                <h6>Rs. {{current_month_debit}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- current_month_balance -->
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body" style="background-color: whitesmoke">
+              <div class="text-center">
+                <h5>Current Average Balance</h5>
+                <h6>Rs.{{current_month_balance}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

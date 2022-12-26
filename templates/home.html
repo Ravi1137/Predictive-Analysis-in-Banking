@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- css static folder -->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/home.css')}}"
+    />
+  </head>
+  <body>
+    <h1 class="text-primary"></h1>
+
+    <!-- Bootstrap Javascripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+<div class="container">
+  <nav
+    class="navbar navbar-light bg-light justify-content-between rounded-2"
+  >
+    <div class="headnav">
+      <h1 class="navbar-brand text-danger">Split Banking</h1>
+    </div>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a href="{{url_for('loan')}}">
+        <button type="button" class="btn btn-primary">Loan Approval</button>
+      </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('fraud')}}">
+        <button type="button" class="btn btn-primary mx-3">
+          Fraud Prediction
+        </button>
+      </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('churn')}}" >
+        <button type="button" class="btn btn-primary">
+          Churm Prediction
+        </button>
+      </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="containor">
+  <div class="row row-cols-1 row-cols-md-3">
+    <div class="hello">
+      <div class="col mb-4">
+        <div
+          class="card h-100"
+          style="background-color: aqua; border-radius: 5px"
+        >
+          <img
+            src="./static/images/loan_img.jpg"
+            class="card-img-top"
+            alt="..."
+            height="340"
+            style="border-radius: 5px 5px 0px 0px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Loan Prediction</h5>
+            <div class="text-center">
+            <a href="{{url_for('loan')}}" class="btn btn-primary mt-2">Predict</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hello">
+      <div class="col mb-4">
+        <div class="card h-100" style="background-color: aqua">
+          <img
+            src="./static/images/fraud_img.jpg"
+            class="card-img-top"
+            alt="..."
+            height="340"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Fraud Prediction</h5>
+            <div class="text-center">
+            <a href="{{url_for('fraud')}}" class="btn btn-primary mt-2">Predict</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hello">
+      <div class="col mb-4">
+        <div class="card h-100" style="background-color: aqua">
+          <img
+            src="./static/images/churn_img.png"
+            class="card-img-top"
+            alt="..."
+            height="340"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Churn Prediction</h5>
+            <div class="text-center">
+            <a href="{{url_for('churn')}}" class="btn btn-primary mt-2">Predict</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
