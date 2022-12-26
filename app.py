@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-import numpy as np
 import pickle
-from sklearn import preprocessing
+
 
 pathloan="./static/model/loanmodel"
 pathfraud="./static/model/fraudmodel"
